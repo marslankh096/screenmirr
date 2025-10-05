@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back_arrow" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/browser"
+            app:layout_constraintStart_toEndOf="@id/back_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/fragment_container_view_tag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:name="com.sid.testscreenmirr.webcast.ui.fragment.StreamFragment"
+        >
+
+    </fragment>
+
+    <LinearLayout
+        android:id="@+id/fab_activity_app_start_stop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/background_start_miorroring"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/bottom_menu_start"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

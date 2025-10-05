@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sid.testscreenmirr">
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+
+        <package android:name="com.yahoo.mobile.client.android.mail" />
+        <package android:name="com.google.android.gm" />
+    </queries>
+
+    <application
+        android:name=".webcast.ScreenStreamApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon_new"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_new"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestScreenMirr"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.VideoDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NewImageDisActivty"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SingleAudioPlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AudioPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VideoPlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ImageDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ImagesMediaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ScreenMirrorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities=" com.sid.testscreenmirr.webcast.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_app_id" />
+
+        <activity
+            android:name=".webcast.ui.activity.AppActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <service
+            android:name=".webcast.service.AppService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            tools:targetApi="q" />
+        <service
+            android:name=".webcast.service.TileActionService"
+            android:exported="true"
+            android:icon="@drawable/ic_more_apps"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".webcast.receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.ironz.binaryprefs.dump.DumpReceiver"
+            tools:node="remove" />
+    </application>
+
+</manifest>

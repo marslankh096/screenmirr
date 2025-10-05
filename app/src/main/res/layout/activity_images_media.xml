@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImagesMediaActivity">
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/images"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/castBtn"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_stop_mirroring" />
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_pictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_grey"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/grey"
+        app:tabTextAppearance="@android:style/TextAppearance"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="#807B7B" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_pictuires"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_pictures" />
+
+
+    <LinearLayout
+        android:id="@+id/no_permission_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="@string/please_allow_permission_in_order_to_view_media_files"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <Button
+            android:id="@+id/ask_permission_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/allow_permissions_from_settings_manually"
+            android:textColor="@color/white"
+            android:background="@drawable/background_start_miorroring"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

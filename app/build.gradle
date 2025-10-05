@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id "kotlin-parcelize"
+
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.sid.testscreenmirr"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        setProperty("archivesBaseName", "Fineart Screen Mirroring "+versionName)
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled=false
+            resValue "string", "ad_app_id", "ca-app-pub-3940256099942544~3347511713"
+            resValue "string", "interstitail_id", "ca-app-pub-3940256099942544/1033173712"
+            resValue "string", "banner_id", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "native_id", "ca-app-pub-3940256099942544/2247696110"
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            resValue "string", "ad_app_id", "ca-app-pub-8620007640118100~7650840219"
+            resValue "string", "interstitail_id", "ca-app-pub-8620007640118100/3603783999"
+            resValue "string", "banner_id", "ca-app-pub-8620007640118100/8664538984"
+            resValue "string", "native_id", "ca-app-pub-3940256099942544/2247696110"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    Properties localProps = new Properties()
+    File localProperties = new File(rootProject.rootDir, "local.properties")
+    if (localProperties.exists() && localProperties.isFile()) {
+        localProperties.withInputStream { localProps.load(it) }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.play:app-update-ktx:2.0.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation "androidx.multidex:multidex:2.0.1"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+
+    // webcast
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.7.10'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+    implementation 'com.afollestad.material-dialogs:color:3.3.0'
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
+    implementation 'com.afollestad.material-dialogs:lifecycle:3.3.0'
+    implementation 'io.insert-koin:koin-android:3.2.0'
+    implementation 'com.github.iamironz:binaryprefs:1.0.1'
+    implementation 'androidx.datastore:datastore-preferences:1.0.0'
+    implementation 'com.elvishew:xlog:1.11.0'
+    implementation ("com.google.android.play:app-update-ktx:2.0.1") {
+        exclude group: "com.android.support"
+    }
+    implementation 'io.ktor:ktor-server-cio:2.0.2'
+    implementation 'io.ktor:ktor-server-default-headers:2.0.2'
+    implementation 'io.ktor:ktor-server-status-pages:2.0.2'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+
+
+}

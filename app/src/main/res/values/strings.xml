@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Screen Mirroring</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aaaa">"Enable the \"Miracast display\" function on your TV.You need to enable it manually on some device.</string>
+    <string name="third">"Click \"Start Mirroring button\", enable the wireless display Function on your phone and wait for device searching</string>
+    <string name="enable_the_miracast_display_nfunction_on_your_tv_you_need_to_nenable_it_manually_on_some_device">Enable the Miracast Display \nfunction on your TV.You need to\nenable it manually on some device</string>
+    <string name="EmailAddress">appmaster567@gmail.com</string>
+    <string name="app_update_activity_dialog_title">Update available</string>
+    <string name="app_update_activity_dialog_message">An update has just been downloaded. Restart app now?</string>
+    <string name="app_update_activity_dialog_restart">Restart</string>
+
+    <string name="image_generator_press_start">Press START button on your mobile</string>
+    <string name="image_generator_go_to_new_address">Please go to new address</string>
+    <string name="image_generator_reload_this_page">Please reload this page</string>
+    <string name="image_generator_address_blocked">Client address blocked</string>
+    <string name="html_submit_text">Submit</string>
+    <string name="html_address_blocked">Client address blocked</string>
+    <string name="error_title">Error</string>
+    <string name="error_port_in_use">Port already in use. Choose another one.</string>
+    <string name="error_invalid_media_projection">Security error: Invalid media projection. Try one more time.</string>
+    <string name="error_ip_address_not_found">Please connect to internet.</string>
+    <string name="error_wrong_image_format">System returns image in unknown format. No fix available. Sorry.</string>
+    <string name="error_exit">Exit</string>
+    <string name="app_activity_collecting_logs">Collecting application error…</string>
+    <string name="app_activity_send_logs">Send error to developer</string>
+    <string name="bottom_menu_start">Start</string>
+    <string name="bottom_menu_stop">Stop</string>
+    <string name="stream_fragment_connected_clients">Connected Device(s): %1$d</string>
+    <string name="stream_fragment_no_address">Device address not found</string>
+    <string name="stream_fragment_copied">Copied</string>
+    <string name="stream_fragment_no_web_browser_found">No web browser found</string>
+    <string name="stream_fragment_external_app_error">External application error</string>
+    <string name="stream_fragment_share_address">Share device address</string>
+    <string name="stream_fragment_client_disconnected">Disconnected</string>
+    <string name="stream_fragment_client_slow_network">Slow connection</string>
+    <string name="stream_fragment_client_connected">Connected</string>
+    <string name="stream_fragment_client_blocked">Blocked</string>
+    <string name="item_device_address">Device address:</string>
+    <string name="item_device_address_description_open_address">Open address</string>
+    <string name="item_device_address_description_copy_address">Copy address</string>
+    <string name="item_device_address_description_share_address">Share address</string>
+    <string name="item_device_address_description_qr_address">Show address as QR-code</string>
+    <string name="permission_activity_error_title_activity_not_found">Permission dialog error</string>
+    <string name="permission_activity_error_activity_not_found">Android bug. Don\'t check \"Don\'t show again\" at the rights request dialogue to capture the screen. If you already did so, reinstall the app.</string>
+    <string name="permission_activity_cast_permission_required_title">Permission required</string>
+    <string name="permission_activity_cast_permission_required">This feature requires Screen Cast permission to capture screen.</string>
+    <string name="permission_activity_error_title">Error</string>
+    <string name="permission_activity_error_unknown">Unknown error</string>
+    <string name="notification_ready_to_stream">Ready to share screen</string>
+    <string name="notification_press_start">Press START to begin web mirroring</string>
+    <string name="notification_start">Start</string>
+    <string name="notification_exit">Close</string>
+    <string name="notification_stream">Web Mirroring</string>
+    <string name="notification_press_stop">Press STOP to end web mirroring</string>
+    <string name="notification_stop">Stop</string>
+    <string name="toast_slow_client_connection">Slow client connection found</string>
+    <string name="about_fragment_email_chooser_header">Sending email…</string>
+
+    <string name="tut_1"> Connet your mobile and other device to the same Wi-Fi</string>
+    <string name="tut_2">Turn off  VPN in connected</string>
+    <string name="tut_3">Open the below link/IP address in other device web browser.</string>
+    <string name="miracast">Miracast</string>
+    <string name="webmirro">Web Mirror</string>
+    <string name="directmirro">Direct Mirror</string>
+
+
+    <string name="html_stream_require_pin" translatable="false">This stream requires PIN to access it</string>
+    <string name="html_enter_pin" translatable="false">Enter pin:\u0020</string>
+    <string name="html_wrong_pin" translatable="false">Wrong pin!</string>
+    <string name="stream_fragment_pin" translatable="false">Pin: %1$s</string>
+
+    <string name="account_email">appmaster567@gmail.com</string>
+    <string name="account_name">app tech master</string>
+    <string name="browser">Browser</string>
+    <string name="audio_player">Audio Player</string>
+    <string name="song_name">Song Name</string>
+    <string name="_0_00">0 : 00</string>
+    <string name="zeros">0 : 00</string>
+    <string name="image_name">Image Name</string>
+    <string name="images">Images</string>
+    <string name="please_allow_permission_in_order_to_view_media_files">Please allow permission in order to view Media files</string>
+    <string name="allow_permissions_from_settings_manually">Allow Permissions from settings manually</string>
+    <string name="screen_mirror">Screen Mirror</string>
+    <string name="make_sure_your_tv_and_phones_connected_to_n_the_same_wifi_network">Make sure your TV and Phones connected to\n the same WIFI network!</string>
+    <string name="screen">Screen</string>
+    <string name="mirroring">Mirroring</string>
+    <string name="mirror_a_phone_to_tv">Mirror A Phone To Tv</string>
+    <string name="cast_video">Cast Video</string>
+    <string name="mirror_video_on_tv">Mirror Video </string>
+    <string name="cast_image">Cast Image</string>
+    <string name="mirror_image_on_tv">Mirror Image </string>
+    <string name="cast_audio">Cast Audio</string>
+    <string name="mirror_audio_on_tv">Mirror Audio </string>
+    <string name="cast_browser">Cast Browser</string>
+    <string name="mirror_browser_on_tv">Mirror Browser </string>
+    <string name="ad">AD</string>
+    <string name="folder">Folder</string>
+    <string name="share_app">Share App</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="how_to_use">How To Use</string>
+    <string name="more_apps">More Apps</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="screen_mirroring">Screen Mirroring</string>
+    <string name="hotouse">How to use ?</string>
+    <string name="don_t_show_again">Don\'t show again</string>
+    <string name="start_mirroring">Start Mirroring</string>
+    <string name="screen_mirroringgg">Screen Mirroring</string>
+    <string name="get_started">Get Started</string>
+    <string name="ad_is_loading">Ad is Loading ...</string>
+    <string name="ad_is_loadingg">Ad is Loading ...</string>
+    <string name="file_name">file name</string>
+    <string name="file_namee">file name</string>
+    <string name="file_size">file size</string>
+    <string name="file_sizee">file size</string>
+    <string name="are_you_sure_you_want_to_exit_the_app">Are you sure you want to exit the app?</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+    <string name="ad_is_loadinggggg">Ad is Loading ...</string>
+    <string name="ad_is_loadingtwo">Ad is Loading ...</string>
+    <string name="ad_is_loadingt">Ad is Loading ...</string>
+    <string name="ad_is_loadingthre">Ad is Loading ...</string>
+    <string name="connect_with_same_wi_fi">Connect With Same WI-FI</string>
+    <string name="make_sure_your_phone_and_tv_are_n_connect_with_same_wi_fi_network">Make sure your phone &amp; Tv are \n connected with same WI-FI network,</string>
+    <string name="and"> &amp;  ,  </string>
+    <string name="turn_off_your_vpn"> turn Off Your VPN</string>
+    <string name="empty">Empty</string>
+    <string name="ad_is_loadingfour">Ad is Loading ...</string>
+    <string name="enable_miracast_display">Enable Miracast Display</string>
+    <string name="enable_wireless_display">Enable Wireless Display</string>
+    <string name="emptytw">Empty</string>A
+    <string name="ad_is_loadingfive">Ad is Loading ...</string>
+    <string name="video_tutorial">Video Tutorial</string>
+    <string name="scan_qr">Scan qr</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="start">Start</string>
+    <string name="file_namet">file name</string>
+    <string name="ip_address_may_change">Please enter each number carefully. The IP address may change every time</string>
+    <string name="share">Share</string>
+    <string name="copy">Copy</string>
+    <string name="please_wait_n_ad_is_loading">Please Wait \n Ad is Loading...</string>
+    <string name="file_namef">file name</string>
+    <string name="folder_names">folder name</string>
+    <string name="folder_namese">folder name</string>
+    <string name="file_nameeight">file name</string>
+
+
+</resources>
